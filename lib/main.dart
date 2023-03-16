@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             ElevatedButton(
               onPressed: () async {
-                await player.setAsset('assets/audio/cow.mp3');
+                await player.setUrl('https://www.applesaucekids.com/sound%20effects/moo.mp3');
                 player.play();
               },
               child: const Text('cow'),
@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
               onPressed: () async {
-                await player2.setAsset('assets/audio/horse.mp3');
+                await player2.setUrl('https://www.applesaucekids.com/sound%20effects/horse_whinney_2.mp3');
                 player2.play();
               },
               child: const Text('Horse'),
