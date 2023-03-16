@@ -36,16 +36,19 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late AudioPlayer player;
+  late AudioPlayer player2;
 
   @override
   void initState() {
     super.initState();
     player = AudioPlayer();
+    player2 = AudioPlayer();
   }
 
   @override
   void dispose() {
     player.dispose();
+    player2.dispose();
     super.dispose();
   }
 
@@ -68,8 +71,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
               onPressed: () async {
-                await player.setAsset('assets/audio/horse.mp3');
-                player.play();
+                await player2.setAsset('assets/audio/horse.mp3');
+                player2.play();
               },
               child: const Text('Horse'),
             ),
